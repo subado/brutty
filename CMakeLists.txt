@@ -10,8 +10,6 @@ file(GLOB SOURCE
 )
 add_executable(${PROJECT_NAME} ${SOURCE})
 
-message(CMAKE_EXPORT_COMPILE_COMMANDS= "${CMAKE_EXPORT_COMPILE_COMMANDS}")
-
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt libzip::zip)
